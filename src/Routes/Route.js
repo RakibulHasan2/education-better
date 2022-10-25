@@ -3,6 +3,7 @@ import Blog from "../Component/Blog/Blog";
 import CourseDetails from "../Component/CourseDetails/CourseDetails";
 import Courses from "../Component/Courses/Courses";
 import Home from "../Component/Home/Home";
+import Login from "../Component/Login/Login";
 import Main from "../Layout/Main";
 export const routes = createBrowserRouter([
     {
@@ -35,7 +36,7 @@ export const routes = createBrowserRouter([
                 element: <Blog></Blog>
             },  {
                 path: '/login',
-                element: <h1>Login page</h1>
+                element: <Login></Login>
             }
         ]
     }
