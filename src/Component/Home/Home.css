@@ -1,0 +1,27 @@
+.get-started{
+    display: flex;
+    background-color: rgb(247, 244, 244);
+    justify-content: center;
+    align-items: center;
+}
+.heading2{
+    width: 45%;
+}
+.heading2 img{
+   width: 100%;
+
+}
+.heading1{
+    width: 30%;
+}
+.heading1 img{
+    width: 100%;
+ }
+ .heading-info{
+    width: 40%;
+ }
+ .heading-info p{
+    text-align: justify;
+    font-size: 20px;
+    font-weight: 600;
+ }

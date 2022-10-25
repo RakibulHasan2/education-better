@@ -1,19 +1,16 @@
 import React from 'react';
 import './Header.css'
-import Button from 'react-bootstrap/Button';
 import Container from 'react-bootstrap/Container';
-import Form from 'react-bootstrap/Form';
 import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
-import NavDropdown from 'react-bootstrap/NavDropdown';
 import Offcanvas from 'react-bootstrap/Offcanvas';
 import { Link } from 'react-router-dom';
 import logo from '../../Images/title.png'
 const Header = () => {
     return (
-        <div >
+        <div>
           {['sm'].map((expand) => (
-        <Navbar key={expand} bg="light" expand={expand} className="mb-3" >
+        <Navbar key={expand} bg="light" expand={expand}>
           <Container fluid>
             <img className='logo' src={logo} alt="" />
             <Navbar.Brand href="#" className='fs-2 fw-bold ms-2'>Education Better</Navbar.Brand>
