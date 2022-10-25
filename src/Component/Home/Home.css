@@ -1,15 +1,14 @@
 .get-started{
-    display: flex;
+    /* display: flex; */
     background-color: rgb(247, 244, 244);
-    justify-content: center;
-    align-items: center;
+    /* justify-content: center; */
+    /* align-items: center; */
 }
 .heading2{
     width: 45%;
 }
 .heading2 img{
    width: 100%;
-
 }
 .heading1{
     width: 30%;
@@ -25,3 +24,19 @@
     font-size: 20px;
     font-weight: 600;
  }
+ @media only screen and (max-width: 600px) {
+    .get-started{
+      flex-direction: column;
+    }
+    .heading2{
+        width: 70%;
+    }
+    .heading1{
+        width: 70%;
+    }
+    .heading-info{
+        width: 80%;
+        margin-top: 20px;
+        margin-bottom: 20px;
+     }
+  }

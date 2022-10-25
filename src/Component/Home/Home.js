@@ -6,7 +6,7 @@ import { Button } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
 const Home = () => {
     return (
-        <div className='get-started'>
+        <div className='get-started d-flex  justify-content-center align-items-center'>
            <div className='heading1'>
             <img src={heading2} alt="" />
            </div>
@@ -20,7 +20,6 @@ const Home = () => {
            <div className='heading2'>
             <img src={heading1} alt="" />
            </div>
-              
         </div>
     );
 };
