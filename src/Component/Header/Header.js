@@ -37,7 +37,8 @@ const Header = () => {
                   {
                 user?.uid ?
                 <>
-                 <button className='button-logout' onClick={logOut}>logout</button>
+                 <button className='button-logout' onClick={logOut}>Log Out</button>
+                 <img src={user.photoURL} alt="" />
                 </>
                 :
                 <>
