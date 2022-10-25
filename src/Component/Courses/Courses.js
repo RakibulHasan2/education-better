@@ -23,9 +23,9 @@ const Courses = () => {
         //    }
         //     </div>  
         // </div>
-        <Container>
+        <Container className='mt-5'>
         <Row>
-            <Col lg="4" className='d-none d-lg-block side-body'>
+            <Col lg="4" className='d-lg-block side-body'>
                 {
                     courses.map(course => <Sidebar
                     key={course.id}

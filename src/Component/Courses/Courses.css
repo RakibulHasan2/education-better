@@ -4,9 +4,23 @@
 } */
 .side-body{
     /* border: 1px solid red; */
+    margin-top: 20px;
+    background-color: rgb(198, 219, 236);
+    height: 400px;
 }
 .course-body{
     /* border: 1px solid blue; */
+    margin-top: 20px;
     display: grid;
     grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
 }
+@media only screen and (max-width: 600px) {
+    .course-body{
+        grid-template-columns: repeat(1, 1fr);
+      margin-left: 12%;
+    }
+    .side-body{
+        margin-bottom: 20px;
+    }
+  }
