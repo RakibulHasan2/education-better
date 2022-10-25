@@ -12,7 +12,6 @@ const SignUP = () => {
         const email = form.email.value;
         const password = form.password.value;
         const confirm = form.Confirm.value;
-        console.log(email, password, confirm)
         
         if( password.length < 6 ){
             setError("your password should be 6 character or more")
