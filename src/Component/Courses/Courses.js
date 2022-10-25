@@ -6,23 +6,7 @@ import { Col, Container, Row } from 'react-bootstrap';
 import Sidebar from '../Sidebar/Sidebar';
 const Courses = () => {
     const courses = useLoaderData();
-    console.log(courses)
     return (
-        // <div className='container'>
-        //     <h2>Find Your Course</h2>
-        //     <div>
-
-        //     </div>
-        //     <div className='course'>
-        //    {
-        //     courses.map( course => <Course
-        //     key={course.id}
-        //     course = {course}
-        //     >
-        //     </Course>)
-        //    }
-        //     </div>  
-        // </div>
         <Container className='mt-5'>
         <Row>
             <Col lg="4" className='d-lg-block side-body'>

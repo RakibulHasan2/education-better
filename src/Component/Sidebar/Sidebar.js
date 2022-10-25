@@ -2,10 +2,10 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import './Sidebar.css'
 const Sidebar = ({course}) => {
-    const {name} = course
+    const {name,id} = course
     return (
         <div className='sidebar'>
-           <Link>{name}</Link>
+           <Link to= {`/courses/${id}`}>{name}</Link>
         </div>
     );
 };
