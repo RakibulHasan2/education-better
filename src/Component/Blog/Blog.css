@@ -1,0 +1,14 @@
+.QA{
+    width: 60%;
+    text-align: left;
+    background-color:rgb(56, 150, 209);
+    margin:2%;
+    margin-left: 17%;
+    padding:3%;
+    border-radius:12px;
+    box-shadow: 10px 10px 10px rgb(182, 182, 206);
+    color: white;
+}
+.QA:hover {
+    background-color: rgb(54, 53, 52);
+}
