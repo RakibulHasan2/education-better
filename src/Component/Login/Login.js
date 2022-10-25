@@ -27,7 +27,7 @@ const Login = () => {
           });
     }
     const handleGoogle = () =>{
-        console.log('clicked')
+
         signWithPopUp()
         .then(result =>{
             const user = result.user;

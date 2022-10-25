@@ -9,7 +9,7 @@ import logo from '../../Images/title.png'
 import { AuthContext } from './../../context/UseContext';
 const Header = () => {
   const {user,logOut} = useContext(AuthContext)
-  console.log(user)
+  
     return (
         <div>
           {['sm'].map((expand) => (

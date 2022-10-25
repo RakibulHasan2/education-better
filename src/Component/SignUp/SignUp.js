@@ -12,6 +12,7 @@ const SignUP = () => {
         const email = form.email.value;
         const password = form.password.value;
         const confirm = form.Confirm.value;
+        console.log(email, password, confirm)
         
         if( password.length < 6 ){
             setError("your password should be 6 character or more")
@@ -27,7 +28,7 @@ const SignUP = () => {
             createUser(email, password)
             .then(result =>{
                 const user = result.user;
-                console.log(user);
+                console.log("after signup",user);
                 form.reset();
             })
             .catch((error) => {
@@ -53,7 +54,7 @@ const SignUP = () => {
                 <input type="password" name='Confirm' id=''  placeholder='Your password' />
                 </div>
                 <p className='text-error'>{error}</p>
-                <button className='submit-button'>Submit</button>
+                <button className='submit-button' >Submit</button>
             </form>
             <p className='login-text'>Already Have an account? <Link className='login-text' to='/login'>Login</Link></p>
         </div>
