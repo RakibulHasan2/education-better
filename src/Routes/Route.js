@@ -3,9 +3,6 @@ import Blog from "../Component/Blog/Blog";
 import Courses from "../Component/Courses/Courses";
 import Home from "../Component/Home/Home";
 import Main from "../Layout/Main";
-
-
-
 export const routes = createBrowserRouter([
     {
         path: '/',
@@ -17,6 +14,7 @@ export const routes = createBrowserRouter([
             },
             {
                 path: '/courses',
+                loader: () => fetch('https://education-better-server-rakibulhasan2.vercel.app/courses'),
                 element:<Courses></Courses>
             },
             {
