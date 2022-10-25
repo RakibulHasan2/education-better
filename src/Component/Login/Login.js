@@ -2,6 +2,7 @@ import React, { useContext } from 'react';
 import { Link, useLocation, useNavigate } from 'react-router-dom';
 import { AuthContext } from '../../context/UseContext';
 import './Login.css'
+import {FaGoogle} from 'react-icons/fa';
 const Login = () => {
     const {signIn,signWithPopUp} = useContext(AuthContext)
     const navigate = useNavigate();
@@ -53,7 +54,7 @@ const Login = () => {
             </form>
             <p className='login-text'>New to Education Better? <Link to='/signup' className='login-text'>Create a New Account</Link></p>
             <button className='google-button' onClick={handleGoogle}>
-                Continue With Google</button>
+            <FaGoogle/> Continue With Google</button>
         </div>
     );
 };

@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import './Header.css'
 import Container from 'react-bootstrap/Container';
 import Nav from 'react-bootstrap/Nav';
@@ -6,7 +6,10 @@ import Navbar from 'react-bootstrap/Navbar';
 import Offcanvas from 'react-bootstrap/Offcanvas';
 import { Link } from 'react-router-dom';
 import logo from '../../Images/title.png'
+import { AuthContext } from './../../context/UseContext';
 const Header = () => {
+  const {user,logOut} = useContext(AuthContext)
+  console.log(user)
     return (
         <div>
           {['sm'].map((expand) => (
@@ -31,7 +34,16 @@ const Header = () => {
                   <Link to = '/courses'>Courses</Link>
                   <Link to = '/FAQ'>FAQ</Link>
                   <Link to = '/Blog'>Blog</Link>
-                  <Link to = '/login'>Login</Link>
+                  {
+                user?.uid ?
+                <>
+                 <button className='button-logout' onClick={logOut}>logout</button>
+                </>
+                :
+                <>
+                <Link to="/login">Login</Link>
+                </>
+                }
                   <Link to = '/'>Toggle</Link>
                 </Nav>
               </Offcanvas.Body>
