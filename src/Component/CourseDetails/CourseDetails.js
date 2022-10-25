@@ -1,18 +1,21 @@
 import React from 'react';
 import { useLoaderData } from 'react-router-dom';
-
+import './CourseDetails.css'
 const CourseDetails = () => {
     const courseDetails = useLoaderData()
     console.log(courseDetails)
     const {name,Difficulty,Duration,classes, details,image,topics} = courseDetails;
     return (
-        <div>
-            <img src={image} alt="" />
-           <h1>{name}</h1>
-           <h4>Difficulty :{Difficulty}</h4>
-           <h4>Duration :{Duration}</h4>
-           <h4>Topics :{topics}</h4>
-           <h4>Course OutCome: {details}</h4>
+        <div className='d-flex container details-container'>
+           <div className='details-body'>
+           <h1 className='text-center text-primary fw-bold'>{name}</h1>
+           <p><span className='fw-bold'>Difficulty</span> :{Difficulty}</p>
+           <p><span className='fw-bold'>Duration</span> :{Duration}</p>
+           <p> <span className='fw-bold'>Classes </span> :{classes}</p>
+           <p><span className='fw-bold'>Topics</span> :{topics}</p>
+           <p><span className='fw-bold'>Course OutCome</span>: {details}</p>
+           </div>
+           <img src={image} alt="" />
         </div>
     );
 };
