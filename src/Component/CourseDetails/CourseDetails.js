@@ -8,7 +8,7 @@ const CourseDetails = () => {
     const {name,Difficulty,Duration,classes, details,image,topics,id} = courseDetails;
     return (
         <div>
-             <PDFButton rootElementID={"pageToDownLoad"} DownloadFileName="testPage"
+             <PDFButton rootElementID={"pageToDownLoad"} DownloadFileName="coursePage"
             ></PDFButton>
            <div className='d-flex container details-container'>
            <div className='details-body'>

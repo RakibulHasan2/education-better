@@ -7,7 +7,9 @@ import Offcanvas from 'react-bootstrap/Offcanvas';
 import { Link } from 'react-router-dom';
 import logo from '../../Images/title.png'
 import { AuthContext } from './../../context/UseContext';
-import { FaUser, FaUserCircle } from 'react-icons/fa';
+import { FaUserCircle } from 'react-icons/fa';
+import Tippy from '@tippy.js/react';
+import 'tippy.js/dist/tippy.css';
 const Header = () => {
   const {user,logOut} = useContext(AuthContext)
   
@@ -38,7 +40,9 @@ const Header = () => {
                   <Link to = '/'>Toggle</Link>
                   {
                     user?.uid ?
-                    <img className='fs-2 me-3 userImg' src={user.photoURL} alt="" />
+                   <Tippy content={<span className='fw-bold'>{user.displayName}</span>}>
+                     <img className='fs-2 me-3 userImg' src={user.photoURL} alt="" />
+                   </Tippy>
                      :
                     <FaUserCircle className='fs-2 me-3'></FaUserCircle>
                  }
