@@ -27,6 +27,7 @@ const Courses = () => {
             </Col>
         </Row>
     </Container>
+    
     );
 };
 

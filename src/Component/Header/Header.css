@@ -9,3 +9,12 @@
     font-size: 20px;
     color: black;
 }
+.logout{
+    /* border: 1px solid blue; */
+}
+.logout img{
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+   
+}

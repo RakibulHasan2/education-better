@@ -1,6 +1,6 @@
 .login-container{
     width: 480px;
-    height: 600px;
+    height: 620px;
     margin: 20px auto;
     /* border: 1px solid #95A0A7; */
     border-radius: 8px;
@@ -43,7 +43,7 @@
 .submit-button{
     width: 415px;
     height: 55px;
-    margin-top: 45px;
+    margin-top: 20px;
     background: rgba(78, 185, 140, 0.749);
     border-radius: 5px;
     font-weight: 700;
@@ -58,13 +58,14 @@
     background: rgba(151, 166, 216, 0.6);
 }
 .login-text{
-    margin-top: 20px;
+    margin-top: 10px;
     color: white;
 }
 .google-button{
     width: 415px;
     height: 55px;
-    margin-top: 45px;
+    margin-top: 10px;
+    margin-bottom: 20px;
     background: rgba(84, 77, 64, 0.749);
     border-radius: 5px;
     font-weight: 700;
@@ -76,5 +77,5 @@
     padding-left: 10px;
 }
 .google-button:hover{
-    background: rgba(218, 139, 20, 0.749);
+    background: rgba(12, 129, 156, 0.749);
 }

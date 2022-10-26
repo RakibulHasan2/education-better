@@ -34,18 +34,18 @@ const Header = () => {
                   <Link to = '/courses'>Courses</Link>
                   <Link to = '/FAQ'>FAQ</Link>
                   <Link to = '/Blog'>Blog</Link>
+                  <Link to = '/'>Toggle</Link>
                   {
                 user?.uid ?
-                <>
-                 <button className='button-logout' onClick={logOut}>Log Out</button>
+                <div className='logout'>
+                 <button className='btn btn-primary fw-bold me-3' onClick={logOut}>Log Out</button>
                  <img src={user.photoURL} alt="" />
-                </>
+                </div>
                 :
                 <>
                 <Link to="/login">Login</Link>
                 </>
                 }
-                  <Link to = '/'>Toggle</Link>
                 </Nav>
               </Offcanvas.Body>
             </Navbar.Offcanvas>

@@ -45,6 +45,10 @@ const SignUP = () => {
                     <input type="email" name='email' id=''  placeholder='Your email address' />
                 </div>
                 <div className='login-form'>
+                <label htmlFor="url">Photo URL</label>
+                <input type="text" name='url' id=''  placeholder='Your Photo URl' />
+                </div>
+                <div className='login-form'>
                 <label htmlFor="password">Password</label>
                 <input type="password" name='password' id=''  placeholder='Your password' />
                 </div>
