@@ -31,9 +31,9 @@ const UserContext = ({children}) => {
         setLoading(true)
         return signInWithPopup(auth, gitProvider)
     }
-    const updateUserProfile =profile =>{
+    const updateUserProfile = profile =>{
         setLoading(true)
-        return   updateProfile(auth.currentUser, profile)
+        return updateProfile(auth.currentUser, profile)
        }
 
     useEffect(() =>{
