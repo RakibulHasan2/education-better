@@ -1,6 +1,6 @@
 .login-container{
     width: 480px;
-    height: 620px;
+    height: 700px;
     margin: 20px auto;
     /* border: 1px solid #95A0A7; */
     border-radius: 8px;
@@ -59,6 +59,7 @@
 }
 .login-text{
     margin-top: 10px;
+    margin-bottom: 40px;
     color: white;
 }
 .google-button{

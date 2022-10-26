@@ -5,8 +5,10 @@ import Courses from "../Component/Courses/Courses";
 import ErrorPage from "../Component/ErrorPage/ErrorPage";
 import Home from "../Component/Home/Home";
 import Login from "../Component/Login/Login";
+import PremiumCourse from "../Component/PremiumCourse/PremiumCourse";
 import SignUP from "../Component/SignUp/SignUp";
 import Main from "../Layout/Main";
+import PrivateRoute from "../PrivateRoute/PrivateRoute";
 export const routes = createBrowserRouter([
     {
         path: '/',
@@ -29,6 +31,13 @@ export const routes = createBrowserRouter([
                   return fetch(`https://education-better-server-rakibulhasan2.vercel.app/courses/${params.id}`)
                 },
                 element:<CourseDetails></CourseDetails>
+              },  
+               {
+                path:'/:id/premium-access',
+                loader: async ({params}) =>{
+                return fetch(`https://education-better-server-rakibulhasan2.vercel.app/courses/${params.id}`)
+                },
+                element: <PrivateRoute><PremiumCourse></PremiumCourse></PrivateRoute>
               },
             {
                 path: '/FAQ',

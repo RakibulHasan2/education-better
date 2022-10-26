@@ -1,14 +1,17 @@
-import React, { useContext } from 'react';
+import React, { useContext, useState } from 'react';
 import { Link, useLocation, useNavigate } from 'react-router-dom';
 import { AuthContext } from '../../context/UseContext';
 import './Login.css'
 import {FaGoogle, FaGithub} from 'react-icons/fa';
 const Login = () => {
     const {signIn,signWithPopUp,signInWithGitHub} = useContext(AuthContext)
-    const navigate = useNavigate();
+    
     const location = useLocation();
     const from =    location.state?.from?.pathname || '/'
     
+    const [error, setError] = useState('')
+    const navigate = useNavigate();
+
     const handleSubmit = event =>{
         event.preventDefault()
         const form = event.target;
@@ -21,9 +24,11 @@ const Login = () => {
             console.log(user);
             form.reset();
             navigate(from, {replace: true})
+            setError('')
         })
         .catch((error) => {
            console.error(error)
+           setError(error.message)
           });
     }
     const handleGoogle = () =>{
@@ -62,6 +67,7 @@ const Login = () => {
                 <label htmlFor="password">Password</label>
                 <input type="password" name='password' id=''  placeholder='Your password' />
                 </div>
+                <p className='text-danger'>{error}</p>
                 <button className='submit-button'>Submit</button>
             </form>
             <p className='login-text'>New to Education Better? <Link to='/signup' className='login-text'>Create a New Account</Link></p>

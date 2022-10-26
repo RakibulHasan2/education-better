@@ -4,15 +4,17 @@ import { AuthContext } from '../../context/UseContext';
 import './SignUp.css'
 const SignUP = () => {
     const [error, setError] = useState(null)
-    const {createUser} = useContext(AuthContext)
+    const {createUser,updateUserProfile} = useContext(AuthContext)
 
+  
     const handleSubmit = event =>{
         event.preventDefault()
         const form = event.target;
         const email = form.email.value;
         const password = form.password.value;
         const confirm = form.Confirm.value;
-        const url = form.url.value
+        const photoURL = form.photoURL.value
+        const name = form.name.value
         // console.log(url)
         
         if( password.length < 6 ){
@@ -31,24 +33,39 @@ const SignUP = () => {
                 const user = result.user;
                 console.log("after signup",user);
                 form.reset();
+                handleProfile(name, photoURL)
+                console.log(name, photoURL)
             })
             .catch((error) => {
                console.error(error)
               });
 
     }
+    const handleProfile = (name, photoURL) =>{
+        const profile ={
+            displayName : name,
+            photoURL : photoURL
+        }
+        updateUserProfile(profile)
+        .then(() => {})
+        .catch(error => console.error(error))
+    }
  
     return (
         <div className='login-container'>
             <h1 className='title'>Sign Up</h1>
             <form onSubmit={handleSubmit}>
+            <div className='login-form'>
+                    <label htmlFor="name">Name</label>
+                    <input type="text" name='name' id=''  placeholder='Your email address' />
+                </div>
                 <div className='login-form'>
                     <label htmlFor="email">Email</label>
                     <input type="email" name='email' id=''  placeholder='Your email address' />
                 </div>
                 <div className='login-form'>
-                <label htmlFor="url">Photo URL</label>
-                <input type="url" name='url' id=''  placeholder='Your Photo URl' />
+                <label htmlFor="photoURL">Photo URL</label>
+                <input type="url" name='photoURL' id=''  placeholder='Your Photo URl' />
                 </div>
                 <div className='login-form'>
                 <label htmlFor="password">Password</label>

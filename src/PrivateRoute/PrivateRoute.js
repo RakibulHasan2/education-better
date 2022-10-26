@@ -1,4 +1,5 @@
 import React, { useContext } from 'react';
+import { Spinner } from 'react-bootstrap';
 import { Navigate, useLocation } from 'react-router-dom';
 import { AuthContext } from '../context/UseContext';
 
@@ -7,7 +8,7 @@ const PrivateRoute = ({children}) => {
   const location = useLocation();
 
  if(loading){
-  return <div>loading</div>
+  return <div className='text-center mt-5'> <Spinner animation="border" variant="primary" /></div>
  }
  
   if( user && user.uid)
