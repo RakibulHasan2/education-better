@@ -7,6 +7,7 @@ import Offcanvas from 'react-bootstrap/Offcanvas';
 import { Link } from 'react-router-dom';
 import logo from '../../Images/title.png'
 import { AuthContext } from './../../context/UseContext';
+import { FaUser, FaUserCircle } from 'react-icons/fa';
 const Header = () => {
   const {user,logOut} = useContext(AuthContext)
   
@@ -36,16 +37,22 @@ const Header = () => {
                   <Link to = '/Blog'>Blog</Link>
                   <Link to = '/'>Toggle</Link>
                   {
+                    user?.uid ?
+                    <img className='fs-2 me-3 userImg' src={user.photoURL} alt="" />
+                     :
+                    <FaUserCircle className='fs-2 me-3'></FaUserCircle>
+                 }
+                  {
                 user?.uid ?
                 <div className='logout'>
                  <button className='btn btn-primary fw-bold me-3' onClick={logOut}>Log Out</button>
-                 <img src={user.photoURL} alt="" />
                 </div>
                 :
                 <>
                 <Link to="/login">Login</Link>
                 </>
                 }
+               
                 </Nav>
               </Offcanvas.Body>
             </Navbar.Offcanvas>

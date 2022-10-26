@@ -12,6 +12,8 @@ const SignUP = () => {
         const email = form.email.value;
         const password = form.password.value;
         const confirm = form.Confirm.value;
+        const url = form.url.value
+        // console.log(url)
         
         if( password.length < 6 ){
             setError("your password should be 6 character or more")
@@ -46,7 +48,7 @@ const SignUP = () => {
                 </div>
                 <div className='login-form'>
                 <label htmlFor="url">Photo URL</label>
-                <input type="text" name='url' id=''  placeholder='Your Photo URl' />
+                <input type="url" name='url' id=''  placeholder='Your Photo URl' />
                 </div>
                 <div className='login-form'>
                 <label htmlFor="password">Password</label>

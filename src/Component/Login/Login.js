@@ -4,7 +4,7 @@ import { AuthContext } from '../../context/UseContext';
 import './Login.css'
 import {FaGoogle, FaGithub} from 'react-icons/fa';
 const Login = () => {
-    const {signIn,signWithPopUp} = useContext(AuthContext)
+    const {signIn,signWithPopUp,signInWithGitHub} = useContext(AuthContext)
     const navigate = useNavigate();
     const location = useLocation();
     const from =    location.state?.from?.pathname || '/'
@@ -37,6 +37,18 @@ const Login = () => {
            console.error(error)
           });
     }
+    const handleGithub = () =>{
+
+        signInWithGitHub()
+        .then(result =>{
+            const user = result.user;
+            console.log(user);
+        })
+        .catch((error) => {
+           console.error(error)
+          });
+    }
+
 
     return (
         <div className='login-container'>
@@ -55,7 +67,7 @@ const Login = () => {
             <p className='login-text'>New to Education Better? <Link to='/signup' className='login-text'>Create a New Account</Link></p>
             <button className='google-button' onClick={handleGoogle}>
             <FaGoogle/> Continue With Google</button>
-            <button className='google-button' onClick={handleGoogle}>
+            <button className='google-button' onClick={handleGithub}>
             <FaGithub/> Continue With Github</button>
         </div>
     );
