@@ -6,6 +6,7 @@ export  const AuthContext = createContext()
 const auth = getAuth(app);
 const provider = new GoogleAuthProvider()
 const gitProvider = new GithubAuthProvider()
+
 const UserContext = ({children}) => {
      
     const [user, setUser] = useState(null)

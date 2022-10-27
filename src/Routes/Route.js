@@ -42,7 +42,7 @@ export const routes = createBrowserRouter([
               },
             {
                 path: '/FAQ',
-                element:<FAQ>   </FAQ>
+                element:<FAQ> </FAQ>
             },
             {
                 path: '/Blog',

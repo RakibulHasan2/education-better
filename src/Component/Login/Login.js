@@ -7,7 +7,7 @@ const Login = () => {
     const {signIn,signWithPopUp,signInWithGitHub} = useContext(AuthContext)
     
     const location = useLocation();
-    const from =    location.state?.from?.pathname || '/'
+    const from =  location.state?.from?.pathname || '/'
     
     const [error, setError] = useState('')
     const navigate = useNavigate();
