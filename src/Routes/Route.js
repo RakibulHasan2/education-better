@@ -22,21 +22,21 @@ export const routes = createBrowserRouter([
             },
             {
                 path: '/courses',
-                loader: () => fetch('https://education-better-server-rakibulhasan2.vercel.app/courses'),
+                loader: () => fetch('https://education-better-server.vercel.app/courses'),
                 element:<Courses></Courses>
             },
             {
                 path:'/courses/:id',
                 loader: async ({params}) =>{
                 //   console.log(params.id)
-                  return fetch(`https://education-better-server-rakibulhasan2.vercel.app/courses/${params.id}`)
+                  return fetch(`https://education-better-server.vercel.app/courses/${params.id}`)
                 },
                 element:<CourseDetails></CourseDetails>
               },  
                {
                 path:'/:id/premium-access',
                 loader: async ({params}) =>{
-                return fetch(`https://education-better-server-rakibulhasan2.vercel.app/courses/${params.id}`)
+                return fetch(`https://education-better-server.vercel.app/courses/${params.id}`)
                 },
                 element: <PrivateRoute><PremiumCourse></PremiumCourse></PrivateRoute>
               },
