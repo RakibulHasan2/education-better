@@ -3,6 +3,7 @@ import Blog from "../Component/Blog/Blog";
 import CourseDetails from "../Component/CourseDetails/CourseDetails";
 import Courses from "../Component/Courses/Courses";
 import ErrorPage from "../Component/ErrorPage/ErrorPage";
+import FAQ from "../Component/FAQ/FAQ";
 import Home from "../Component/Home/Home";
 import Login from "../Component/Login/Login";
 import PremiumCourse from "../Component/PremiumCourse/PremiumCourse";
@@ -41,7 +42,7 @@ export const routes = createBrowserRouter([
               },
             {
                 path: '/FAQ',
-                element:<h1>FAQ page</h1>
+                element:<FAQ>   </FAQ>
             },
             {
                 path: '/Blog',

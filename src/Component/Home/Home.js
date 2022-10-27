@@ -11,6 +11,7 @@ const Home = () => {
             <img src={heading2} alt="" />
            </div>
            <div className='heading-info'>
+            <h1>Hello Dear, <span className='text-primary fw-bold'>Students</span></h1>
              <p>Welcome to Our Institution. Here You can find the course that is suitable for your future job sector. We encourage students to do our courses because we teach in a unique way.</p>
              <p>So hurry up!! our registration deadline means deadline.</p>
              <Link to= '/courses'>

@@ -56,7 +56,7 @@ const Header = () => {
                   <Link to = '/FAQ'>FAQ</Link>
                   <Link to = '/Blog'>Blog</Link>
                   <Link className={`Header ${theme}`} onClick={toggleTheme}><Button style={{"borderRadius": "10%"} } variant = {theme}>{theme} {theme === 'light'?
-                  <FaSun className='mb-1'></FaSun>:
+                  <FaSun className='mb-1 yellow-sun'></FaSun>:
                   <FaMoon className='mb-1'></FaMoon>
                   }
                   </Button></Link>
