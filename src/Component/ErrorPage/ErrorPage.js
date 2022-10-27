@@ -5,7 +5,7 @@ import './ErrorPage.css'
 const ErrorPage = () => {
     return (
         <div className='container d-flex error-body'>
-          <div className=''>
+          <div>
             <h2 className='error'>
               <span className='sr-only'>Error</span>404
             </h2>
