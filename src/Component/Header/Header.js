@@ -37,7 +37,7 @@ const Header = () => {
         <Navbar key={expand} bg="light" expand={expand}>
           <Container fluid>
             <img className='logo' src={logo} alt="" />
-            <Navbar.Brand href="#" className='fs-2 fw-bold ms-2'>Education Better</Navbar.Brand>
+            <Navbar.Brand href="#" className='fs-2 fw-bold '>Education Better</Navbar.Brand>
             <Navbar.Toggle aria-controls={`offcanvasNavbar-expand-${expand}`} />
             <Navbar.Offcanvas
               id={`offcanvasNavbar-expand-${expand}`}

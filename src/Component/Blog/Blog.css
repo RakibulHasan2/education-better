@@ -12,3 +12,12 @@
 .QA:hover {
     background-color: rgb(54, 53, 52);
 }
+@media only screen and (max-width: 600px) {
+    .QA{
+        width: 90%;
+        margin-left: 20px;
+       
+    }
+
+
+  }

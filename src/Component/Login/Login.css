@@ -18,7 +18,6 @@
 }
 .login-form {
     margin-bottom: 20px;
-  
 }
 .login-form label{
     display: block;
@@ -80,3 +79,20 @@
 .google-button:hover{
     background: rgba(12, 129, 156, 0.749);
 }
+@media only screen and (max-width: 600px) {
+    .login-container{
+        width: 350px;
+        height: 700px;    
+    }
+    .login-form input{
+        width: 300px;
+    }
+    .submit-button{
+        width: 300px;
+    }
+    .google-button{
+        width: 300px;
+        
+    }
+    
+  }

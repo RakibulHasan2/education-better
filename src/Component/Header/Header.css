@@ -1,7 +1,7 @@
 
 .logo{
     width: 50px;
-    margin-left: 30px;
+    margin-left: 10px;
 }
 .nav a{
     text-decoration: none;
@@ -26,4 +26,17 @@
 .yellow-sun{
     color: rgb(136, 136, 46);
     font-size: 20px;
+}
+
+@media only screen and (max-width: 600px) {
+    .nav a{
+        
+        margin-bottom: 20px;
+    }
+    .logout{
+        margin-top: 23px;
+    }
+   
+  
+   
 }
