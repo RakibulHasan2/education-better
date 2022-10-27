@@ -14,3 +14,12 @@
     height: 40px;
     border-radius: 50%;
 }
+.dark {
+    background-color: #333;
+    color: #fff;
+}
+
+.light {
+    background-color: #fff;
+    color: #333;
+}

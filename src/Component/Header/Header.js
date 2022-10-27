@@ -1,4 +1,4 @@
-import React, { useContext } from 'react';
+import React, { useContext, useEffect, useState } from 'react';
 import './Header.css'
 import Container from 'react-bootstrap/Container';
 import Nav from 'react-bootstrap/Nav';
@@ -7,11 +7,29 @@ import Offcanvas from 'react-bootstrap/Offcanvas';
 import { Link } from 'react-router-dom';
 import logo from '../../Images/title.png'
 import { AuthContext } from './../../context/UseContext';
-import { FaUserCircle } from 'react-icons/fa';
+import { FaSun, FaUserCircle, FaCheck, FaMoon } from 'react-icons/fa';
 import Tippy from '@tippy.js/react';
 import 'tippy.js/dist/tippy.css';
+import { Button } from 'react-bootstrap';
 const Header = () => {
   const {user,logOut} = useContext(AuthContext)
+
+  const [theme, setTheme] = useState(
+    localStorage.getItem('theme') || 'light'
+   );
+   const toggleTheme = () => {
+    if (theme === 'light') {
+        setTheme('dark');
+    }
+    else {
+        setTheme('light')
+    }
+   }
+   useEffect(() => {
+    localStorage.setItem('theme', theme);
+    document.body.className = theme;
+     }, [theme])
+
   
     return (
         <div>
@@ -37,7 +55,11 @@ const Header = () => {
                   <Link to = '/courses'>Courses</Link>
                   <Link to = '/FAQ'>FAQ</Link>
                   <Link to = '/Blog'>Blog</Link>
-                  <Link to = '/'>Toggle</Link>
+                  <Link className={`Header ${theme}`} onClick={toggleTheme}><Button style={{"borderRadius": "10%"} } variant = {theme}>{theme} {theme === 'light'?
+                  <FaSun className='mb-1'></FaSun>:
+                  <FaMoon className='mb-1'></FaMoon>
+                  }
+                  </Button></Link>
                   {
                     user?.uid ?
                    <Tippy content={<span className='fw-bold'>{user.displayName}</span>}>

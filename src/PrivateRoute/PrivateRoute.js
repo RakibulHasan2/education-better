@@ -8,7 +8,7 @@ const PrivateRoute = ({children}) => {
   const location = useLocation();
 
  if(loading){
-  return <div className='text-center mt-5'> <Spinner animation="border" variant="primary" /></div>
+  return <div className='text-center mt-5'> <Spinner animation="border" variant="success" /></div>
  }
  
   if( user && user.uid)
